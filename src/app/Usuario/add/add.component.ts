@@ -20,7 +20,7 @@ export class AddComponent implements OnInit {
   Guardar(){
     this.service.createUsuario(this.usuario)
     .subscribe(data=>{
-      alert("Se Agrego con Exito...!!!");
+      alert("Se Agregó con Éxito.!");
       this.router.navigate(["listar"]);
     })
   }
