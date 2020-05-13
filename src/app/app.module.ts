@@ -9,6 +9,7 @@ import { EditComponent } from './Usuario/edit/edit.component';
 import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service';
 import {HttpClientModule} from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,11 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+    
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

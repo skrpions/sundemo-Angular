@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faListUl } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-root',
@@ -7,6 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // Iconos de Font-awesome
+  faUserPlus = faUserPlus;
+  faListUl = faListUl;
+
   title = 'sundemo';
 
   // Creo un constructor vacío

@@ -21,10 +21,11 @@
                         <td>{{usuario.name}}</td>
                         <td>{{usuario.apellidos}}</td>
                         <td>
-                            <!--<div class='form-button-action'> <button type='button' class='editarUsuario btn btn-link btn-primary btn-lg' data-toggle='modal' data-target='' data-whatever='@mdo'><i class='far fa-edit'></i></button> <button type='button' class='eliminarUsuario btn btn-link btn-danger' data-toggle='modal' data-target='' data-whatever='@mdo'><i class='far fa-trash-alt'></i></button> </div>-->
+                            <!--<div class='form-button-action'> <button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='' data-whatever='@mdo'><fa-icon [icon]="faPencilAlt"></fa-icon></button> <button type='button' class='btn btn-link btn-danger' data-toggle='modal' data-target='' data-whatever='@mdo'><i class='fas fa-trash-alt'></i></button> </div>-->
                             <!--<button type='button' class='btn btn-primary' data-toggle='modal' data-target='' data-whatever='@mdo'><i class='fas fa-edit'></i></button>-->
-                            <button (click)="Editar(usuario)" type="button" class="btn btn-info">E</button>
-                            <button (click)="Delete(usuario)" type="button" class="btn btn-danger">X</button>
+                            
+                            <button (click)="Editar(usuario)" type="button" class="btn btn-info"><fa-icon [icon]="faPencilAlt"></fa-icon></button>
+                            <button (click)="Delete(usuario)" type="button" class="btn btn-danger"><fa-icon [icon]="faTrashAlt"></fa-icon></button> 
                         </td>
                     </tr>
                 </tbody>

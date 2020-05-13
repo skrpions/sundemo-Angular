@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {ServiceService} from '../../Service/service.service';
 import {Usuario} from 'src/app/Modelo/Usuario';
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-listar',
@@ -9,6 +11,10 @@ import {Usuario} from 'src/app/Modelo/Usuario';
   styleUrls: ['./listar.component.css']
 })
 export class ListarComponent implements OnInit {
+
+  // Iconos de Font-awesome
+  faPencilAlt = faPencilAlt;
+  faTrashAlt = faTrashAlt;
 
   usuarios:Usuario[];
   constructor(private service:ServiceService, private router:Router) { }
