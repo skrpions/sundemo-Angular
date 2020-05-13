@@ -11,8 +11,6 @@ export class ServiceService {
 
   // Está Url hace referencia al proyecto Backend
   Url = 'http://localhost:8081';
-  UrlAdd = 'http://localhost:8081/add';
-  UrlEdit = 'http://localhost:8081/edit';
 
   // Método que usaré para traer los datos
   getUsuarios(){
@@ -21,7 +19,7 @@ export class ServiceService {
 
   // Método para crear un Nuevo Usuario
   createUsuario(usuario:Usuario){
-    return this.http.post<Usuario>(this.UrlAdd,usuario);
+    return this.http.post<Usuario>(this.Url+"/add",usuario);
   }
 
   // Método para capturar la fila seleccionada y mostrar en el formulario
