@@ -12,6 +12,7 @@ export class ServiceService {
   // Está Url hace referencia al proyecto Backend
   Url = 'http://localhost:8081';
   UrlAdd = 'http://localhost:8081/add';
+  UrlEdit = 'http://localhost:8081/edit';
 
   // Método que usaré para traer los datos
   getUsuarios(){
@@ -23,13 +24,13 @@ export class ServiceService {
     return this.http.post<Usuario>(this.UrlAdd,usuario);
   }
 
-  /* Método para capturar la fila seleccionada y mostrar en el formulario
+  // Método para capturar la fila seleccionada y mostrar en el formulario
   getUsuarioId(id:number){
-    return this.http.get<Usuario>(this.Url2+"/"+id);
+    return this.http.get<Usuario>(this.Url+"/"+id);
   }
 
   // Método para editar un Usuario 
   updateUsuario(usuario:Usuario){
-    return this.http.put<Usuario>(this.Url2+"/"+usuario.id,usuario);
-  } */
+    return this.http.put<Usuario>(this.Url+"/edit/"+usuario.id,usuario);
+  } 
 }

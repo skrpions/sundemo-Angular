@@ -14,10 +14,10 @@ export class EditComponent implements OnInit {
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit() {
-    //this.Editar();
+    this.Editar();
   }
 
-  /*
+  
   Editar(){
     // Recibo el id de la fila seleccionada
     let id=localStorage.getItem("id");
@@ -34,5 +34,5 @@ export class EditComponent implements OnInit {
       alert("Se actualizó Exitosamente!");
       this.router.navigate(["listar"]);
     })
-  } */
+  } 
 }
