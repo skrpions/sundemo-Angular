@@ -20,8 +20,18 @@ export class ListarComponent implements OnInit {
     });
   }
 
+  // Método Editar
   Editar(usuario:Usuario){
     localStorage.setItem("id",usuario.id.toString()); // Envío el id de la fila seleccionada
     this.router.navigate(["edit"]); // Redirecciono al formulario
+  }
+
+  // Método Eliminar
+  Delete(usuario:Usuario){
+    this.service.deleteUsuario(usuario)
+    .subscribe(data=>{
+      this.usuarios=this.usuarios.filter(u=>u!==usuario);
+      alert("Usuario Eliminado!");
+    })
   }
 }
