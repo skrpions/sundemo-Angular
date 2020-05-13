@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container col-md-8">
     <div class="card">
         <div class="card-header">
             <h3>Usuarios</h3>
@@ -8,10 +8,10 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>NOMBRES</th>
-                        <th>APELLIDOS</th>
-                        <th>ACCIONES</th>
+                        <th style="text-align: center;">Id</th>
+                        <th style="text-align: center;">Nombre</th>
+                        <th style="text-align: center;">Apellido</th>
+                        <th style="text-align: center;">Acción</th>
                     </tr>
                 </thead>
 
@@ -21,8 +21,10 @@
                         <td>{{usuario.name}}</td>
                         <td>{{usuario.apellidos}}</td>
                         <td>
-                            <button type="button" class="btn btn-warning">Editar</button>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
+                            <!--<div class='form-button-action'> <button type='button' class='editarUsuario btn btn-link btn-primary btn-lg' data-toggle='modal' data-target='' data-whatever='@mdo'><i class='far fa-edit'></i></button> <button type='button' class='eliminarUsuario btn btn-link btn-danger' data-toggle='modal' data-target='' data-whatever='@mdo'><i class='far fa-trash-alt'></i></button> </div>-->
+                            <!--<button type='button' class='btn btn-primary' data-toggle='modal' data-target='' data-whatever='@mdo'><i class='fas fa-edit'></i></button>-->
+                            <button (click)="Editar(usuario)" type="button" class="btn btn-info">E</button>
+                            <button type="button" class="btn btn-danger">X</button>
                         </td>
                     </tr>
                 </tbody>
@@ -30,3 +32,4 @@
         </div>
     </div>
 </div>
+

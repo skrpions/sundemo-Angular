@@ -17,6 +17,11 @@ export class ListarComponent implements OnInit {
     this.service.getUsuarios()
     .subscribe(data=>{
       this.usuarios=data;
-    })
+    });
+  }
+
+  Editar(usuario:Usuario){
+    localStorage.setItem("id",usuario.id.toString()); // Envío el id de la fila seleccionada
+    this.router.navigate(["edit"]); // Redirecciono al formulario
   }
 }

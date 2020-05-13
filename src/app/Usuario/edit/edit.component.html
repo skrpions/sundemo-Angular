@@ -1,1 +1,31 @@
-<p>edit works!</p>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Usuario</h3>
+        </div>
+
+        <div class="card-body">
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">Nombres:</label>
+                    <input [(ngModel)]="usuario.name" name="name" type="text"  class="form-control" id="validationCustom01" placeholder="" required>
+                    <div class="valid-feedback">
+                      Se ve bien!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Apellidos:</label>
+                    <input [(ngModel)]="usuario.apellidos" name="apellidos" type="text"  class="form-control" id="validationCustom02" placeholder="" required>
+                    <div class="valid-feedback">
+                      Se ve bien!
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- <button (click)="Actualizar(usuario)" class="btn btn-primary btn-block">Actualizar</button> -->
+              </form>
+        </div>
+    </div>
+</div>
+

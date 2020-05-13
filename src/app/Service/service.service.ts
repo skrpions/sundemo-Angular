@@ -10,10 +10,26 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 
   // Está Url hace referencia al proyecto Backend
-  Url = 'http://localhost:8081/usuarios';
+  Url = 'http://localhost:8081/usuarios/';
+  Url2 = 'http://localhost:8081/usuarios/add';
 
-  // Métodos que usaré para traer los datos
+  // Método que usaré para traer los datos
   getUsuarios(){
     return this.http.get<Usuario[]>(this.Url) // Con esta linea obtengo todos los datos de la Url que viene del Backend
   }
+
+  // Método para crear un Nuevo Usuario
+  createUsuario(usuario:Usuario){
+    return this.http.post<Usuario>(this.Url2,usuario);
+  }
+
+  /* Método para capturar la fila seleccionada y mostrar en el formulario
+  getUsuarioId(id:number){
+    return this.http.get<Usuario>(this.Url2+"/"+id);
+  }
+
+  // Método para editar un Usuario 
+  updateUsuario(usuario:Usuario){
+    return this.http.put<Usuario>(this.Url2+"/"+usuario.id,usuario);
+  } */
 }
